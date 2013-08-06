@@ -2,8 +2,8 @@
 
 cmake_minimum_required (VERSION 2.8)
 
-project ("flowers" CXX)
+project ("garden" CXX)
 
-add_executable (flowers main.cpp)
+add_executable (garden main.cpp)
 
-target_link_libraries (flowers sfml-window sfml-system GL)
+target_link_libraries (garden sfml-window sfml-system GL)
