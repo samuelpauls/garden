@@ -15,7 +15,7 @@ int main (int argc, char *argv[])
     static const std::string TITLE ("Flowers");
     sf::Window window (video_mode, TITLE);
 
-    Rose rose;
+    Rose rose (0.2F, 0.1F);
 
     bool is_running = true;
     while (is_running)
@@ -23,15 +23,9 @@ int main (int argc, char *argv[])
         sf::Event event;
         while (window.pollEvent (event))
         {
-            switch (event.type)
+            if (event.type == sf::Event::Closed)
             {
-            case sf::Event::Closed:
                 is_running = false;
-                break;
-            case sf::Event::Resized:
-                break;
-            case sf::Event::LostFocus:
-                break;
             }
         }
 

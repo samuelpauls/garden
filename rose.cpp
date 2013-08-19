@@ -4,8 +4,15 @@
 #include <GL/gl.h>
 #include "rose.h"
 
+Rose::Rose(float x, float y) throw(): x (x), y (y)
+{
+}
+
 void Rose::draw() const throw()
 {
+    glPushMatrix();
+    glTranslatef (x, y, 0.0F);
+
     glBegin (GL_LINE_LOOP);
 
         // Source of equations and more information:
@@ -31,4 +38,6 @@ void Rose::draw() const throw()
         }
 
     glEnd();
+
+    glPopMatrix();
 }

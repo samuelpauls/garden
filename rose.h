@@ -5,7 +5,13 @@
 
 class Rose
 {
+private:
+    float x;
+    float y;
+
 public:
+    Rose(float x, float y) throw();
+
     void draw() const throw();
 };
 
